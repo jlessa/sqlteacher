@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Questoes</title>
+</head>
+<body>
+<h1>Permissoes</h1>
+<% if @questoes.any? %>
+    <table>
+      <thead>
+      <tr>
+        <th>ID</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @questoes.each do |questao| %>
+          <tr>
+            <td><%= questao.idquestao %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+<% else %>
+    <h1>Nenhuma Questao</h1>
+<% end %>
+</body>
+</html>

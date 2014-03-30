@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Permissoes</title>
+</head>
+<body>
+<h1>Permissoes</h1>
+<% if @permissoes.any? %>
+    <table>
+      <thead>
+      <tr>
+        <th>ID</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @permissoes.each do |permissao| %>
+          <tr>
+            <td><%= permissao.idpermissao %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+<% else %>
+    <h1>Nenhuma Familia no jogo</h1>
+<% end %>
+</body>
+</html>

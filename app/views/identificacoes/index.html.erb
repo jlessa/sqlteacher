@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Usuarios</title>
+
+</head>
+<body>
+
+<h1>Usuarios</h1>
+<% if @usuarios.any? %>
+    <table>
+      <thead>
+      <tr>
+        <th>ID</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @usuarios.each do |usuario| %>
+          <tr>
+            <td><%= usuario.idusuario %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+<% else %>
+    <h1>Nenhum Usuario</h1>
+<% end %>
+</body>
+</html>
