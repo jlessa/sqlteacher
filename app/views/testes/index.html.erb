@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>teste</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<h1>Teste</h1>
+<% if @testes.any? %>
+    <table>
+      <thead>
+      <tr>
+        <th>Numero</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @testes.each do |teste| %>
+          <tr>
+            <td><%= teste.idteste %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+<% else %>
+    <h1>Nenhuma Familia no jogo</h1>
+<% end %>
+</body>
+</html>
