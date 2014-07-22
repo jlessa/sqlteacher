@@ -5,9 +5,14 @@ gem 'rails', '3.2.16'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
+#########################################################
+# Mudança de banco
+  ##gem 'pg'
+  ##gem 'thin'
+gem 'mysql2'
+#########################################################
+
 gem 'therubyracer'
-gem 'thin'
 gem 'awesome_print'
 # Gems used only for assets and not required
 # in production environments by default.
